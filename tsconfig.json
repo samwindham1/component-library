@@ -6,6 +6,12 @@
         "target": "es5",
         "jsx": "react-jsx",
         "allowJs": true,
-        "moduleResolution": "node"
-    }
+        "moduleResolution": "node",
+        "baseUrl": "./src",
+        "paths": {
+            "@theme/*": ["./theme/*"]
+        }
+    },
+    "include": ["src/**/*"],
+    "files": ["src/theme/styled.d.ts"]
 }

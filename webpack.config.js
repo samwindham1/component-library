@@ -34,7 +34,10 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js']
+        extensions: ['.tsx', '.ts', '.js'],
+        alias: {
+            '@theme': path.resolve(__dirname, 'src/theme/')
+        }
     },
     externals: ['react', 'react-dom', 'styled-components']
 };

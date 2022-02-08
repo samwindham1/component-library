@@ -1,5 +1,6 @@
 import { debug, StateWrapper } from './utils';
-import { Button, Checkbox, TextInput } from '@samwindham1/component-library';
+import { ThemeProvider, Button, Checkbox, TextInput } from '@samwindham1/component-library';
+import { theme } from './theme';
 import './index.css';
 
 const components = [
@@ -16,8 +17,10 @@ const components = [
 
 export const App = () => (
     <div className='App'>
-        {components.map((component) => (
-            <div key={component.key}>{component}</div>
-        ))}
+        <ThemeProvider theme={theme}>
+            {components.map((component) => (
+                <div key={component.key}>{component}</div>
+            ))}
+        </ThemeProvider>
     </div>
 );
