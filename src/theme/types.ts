@@ -1,3 +1,7 @@
+import { ButtonTheme } from '../components/Button/types';
+import { CheckboxTheme } from '../components/Checkbox/types';
+import { TextInputTheme } from '../components/TextInput/types';
+
 export interface Color {
     primary: string;
     primary_light: string;
@@ -52,8 +56,13 @@ export type Constants = {
     element: Element;
 };
 
+export type Components = {
+    button: ButtonTheme;
+    checkbox: CheckboxTheme;
+    textInput: TextInputTheme;
+};
 
-export type Theme = Constants;
+export type Theme = Constants & Components;
 
 export type ComponentLibraryTheme = {
     componentLibrary: Theme;

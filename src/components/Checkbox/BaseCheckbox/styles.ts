@@ -20,11 +20,11 @@ interface customProps {
 const UncheckedStyle = css`
     display: inline-block;
     position: relative;
-    width: 16px;
-    height: 16px;
-    background-color: #fff;
-    border: 2px solid #999;
-    border-radius: 4px;
+    width: ${(props) => props.theme.componentLibrary.checkbox.width};
+    height: ${(props) => props.theme.componentLibrary.checkbox.height};
+    background-color: ${(props) => props.theme.componentLibrary.checkbox.backgroundColor};
+    border: ${(props) => props.theme.componentLibrary.checkbox.border};
+    border-radius: ${(props) => props.theme.componentLibrary.checkbox.borderRadius};
     transition: all 150ms;
     cursor: pointer;
 
@@ -34,19 +34,19 @@ const UncheckedStyle = css`
 `;
 
 const CheckedStyle = css`
-    background-color: #0055ff;
-    border-color: #0055ff;
+    background-color: ${(props) => props.theme.componentLibrary.checkbox.backgroundColor_checked};
+    border-color: ${(props) => props.theme.componentLibrary.checkbox.borderColor_checked};
 
     ::after {
         content: '';
         position: absolute;
-        height: 8px;
-        width: 4px;
-        border: 2px solid white;
+        width: ${(props) => props.theme.componentLibrary.checkbox.check.width};
+        height: ${(props) => props.theme.componentLibrary.checkbox.check.height};
+        border: ${(props) => props.theme.componentLibrary.checkbox.check.border};
         border-top: none;
         border-left: none;
-        left: 5px;
-        top: 1px;
+        left: ${(props) => props.theme.componentLibrary.checkbox.check.left};
+        top: ${(props) => props.theme.componentLibrary.checkbox.check.top};
         transform: rotate(45deg);
     }
 `;

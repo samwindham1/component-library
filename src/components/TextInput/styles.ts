@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 export const TextInput = styled.input.attrs({ type: 'text' })`
-    border: 2px solid #999;
-    border-radius: 4px;
-    height: 20px;
-    padding: 2px 8px;
+    border: ${(props) => props.theme.componentLibrary.textInput.border};
+    border-radius: ${(props) => props.theme.componentLibrary.textInput.borderRadius};
+    height: ${(props) => props.theme.componentLibrary.textInput.height};
+    padding: ${(props) => props.theme.componentLibrary.textInput.padding};
 
     :focus,
     :active {
-        outline: none;
+        outline: 0;
         border: 2px solid #0055ff;
     }
 `;

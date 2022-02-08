@@ -1,18 +1,17 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-    background-color: #0055ff;
-    font-size: 16px;
-    color: white;
-    border: none;
-    box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
-    padding: 8px 16px;
+    background-color: ${(props) => props.theme.componentLibrary.button.backgroundColor};
+    font-size: ${(props) => props.theme.componentLibrary.button.fontSize};
+    color: ${(props) => props.theme.componentLibrary.button.color};
+    border: ${(props) => props.theme.componentLibrary.button.border};
+    box-shadow: ${(props) => props.theme.componentLibrary.button.boxShadow};
+    border-radius: ${(props) => props.theme.componentLibrary.button.borderRadius};
+    padding: ${(props) => props.theme.componentLibrary.button.padding};
 
     :hover,
     :focus {
-        background-color: #2075ff;
-        color: white;
+        background-color: ${(props) => props.theme.componentLibrary.button.backgroundColor_hover};
         cursor: pointer;
     }
 
@@ -21,6 +20,6 @@ export const Button = styled.button`
     }
 
     :active {
-        background-color: blue;
+        background-color: ${(props) => props.theme.componentLibrary.button.backgroundColor_active};
     }
 `;
