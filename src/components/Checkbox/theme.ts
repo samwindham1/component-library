@@ -1,9 +1,10 @@
 import { CheckboxTheme } from './types';
 import { Constants } from '@theme/types';
 
-export const checkbox = ({ color, element }: Constants): CheckboxTheme => ({
+export const checkbox = ({ font, color, element }: Constants): CheckboxTheme => ({
     label: {
-        margin: element.margin.narrow
+        margin: element.margin.narrow,
+        lineHeight: font.lineHeight.default
     },
     width: '16px',
     height: '16px',

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const CheckboxLabel = styled.label`
-    margin-left: ${(props) => props.theme.componentLibrary.checkbox.label.margin};
+    margin-left: ${({ theme }) => theme.componentLibrary.checkbox.label.margin};
+    line-height: ${({ theme }) => theme.componentLibrary.checkbox.label.lineHeight};
     cursor: pointer;
 `;
 export const CheckboxContainer = styled.div`

@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-    background-color: ${(props) => props.theme.componentLibrary.button.backgroundColor};
-    font-size: ${(props) => props.theme.componentLibrary.button.fontSize};
-    color: ${(props) => props.theme.componentLibrary.button.color};
-    border: ${(props) => props.theme.componentLibrary.button.border};
-    box-shadow: ${(props) => props.theme.componentLibrary.button.boxShadow};
-    border-radius: ${(props) => props.theme.componentLibrary.button.borderRadius};
-    padding: ${(props) => props.theme.componentLibrary.button.padding};
+    background-color: ${({ theme }) => theme.componentLibrary.button.backgroundColor};
+    font-size: ${({ theme }) => theme.componentLibrary.button.fontSize};
+    color: ${({ theme }) => theme.componentLibrary.button.color};
+    border: ${({ theme }) => theme.componentLibrary.button.border};
+    box-shadow: ${({ theme }) => theme.componentLibrary.button.boxShadow};
+    border-radius: ${({ theme }) => theme.componentLibrary.button.borderRadius};
+    padding: ${({ theme }) => theme.componentLibrary.button.padding};
 
     :hover,
     :focus {
-        background-color: ${(props) => props.theme.componentLibrary.button.backgroundColor_hover};
+        background-color: ${({ theme }) => theme.componentLibrary.button.backgroundColor_hover};
         cursor: pointer;
     }
 
@@ -20,6 +20,6 @@ export const Button = styled.button`
     }
 
     :active {
-        background-color: ${(props) => props.theme.componentLibrary.button.backgroundColor_active};
+        background-color: ${({ theme }) => theme.componentLibrary.button.backgroundColor_active};
     }
 `;

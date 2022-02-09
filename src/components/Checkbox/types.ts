@@ -3,6 +3,7 @@ import { BaseCheckboxProps } from './BaseCheckbox/types';
 export interface CheckboxTheme {
     label: {
         margin: string;
+        lineHeight: string;
     };
     width: string;
     height: string;

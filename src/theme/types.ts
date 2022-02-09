@@ -19,12 +19,20 @@ export interface Color {
 
 export interface Font {
     fontFamily: string;
+    lineHeight: {
+        normal: string;
+        default: string;
+    };
     size: {
         primary: string;
     };
     color: {
         primary: string;
         inverted: string;
+    };
+    fontWeight: {
+        normal: string;
+        bold: string;
     };
 }
 

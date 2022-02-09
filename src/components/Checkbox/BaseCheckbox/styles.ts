@@ -13,18 +13,14 @@ export const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
     width: 1px;
 `;
 
-interface customProps {
-    checked: boolean;
-}
-
 const UncheckedStyle = css`
     display: inline-block;
     position: relative;
-    width: ${(props) => props.theme.componentLibrary.checkbox.width};
-    height: ${(props) => props.theme.componentLibrary.checkbox.height};
-    background-color: ${(props) => props.theme.componentLibrary.checkbox.backgroundColor};
-    border: ${(props) => props.theme.componentLibrary.checkbox.border};
-    border-radius: ${(props) => props.theme.componentLibrary.checkbox.borderRadius};
+    width: ${({ theme }) => theme.componentLibrary.checkbox.width};
+    height: ${({ theme }) => theme.componentLibrary.checkbox.height};
+    background-color: ${({ theme }) => theme.componentLibrary.checkbox.backgroundColor};
+    border: ${({ theme }) => theme.componentLibrary.checkbox.border};
+    border-radius: ${({ theme }) => theme.componentLibrary.checkbox.borderRadius};
     transition: all 150ms;
     cursor: pointer;
 
@@ -34,26 +30,26 @@ const UncheckedStyle = css`
 `;
 
 const CheckedStyle = css`
-    background-color: ${(props) => props.theme.componentLibrary.checkbox.backgroundColor_checked};
-    border-color: ${(props) => props.theme.componentLibrary.checkbox.borderColor_checked};
+    background-color: ${({ theme }) => theme.componentLibrary.checkbox.backgroundColor_checked};
+    border-color: ${({ theme }) => theme.componentLibrary.checkbox.borderColor_checked};
 
     ::after {
         content: '';
         position: absolute;
-        width: ${(props) => props.theme.componentLibrary.checkbox.check.width};
-        height: ${(props) => props.theme.componentLibrary.checkbox.check.height};
-        border: ${(props) => props.theme.componentLibrary.checkbox.check.border};
+        width: ${({ theme }) => theme.componentLibrary.checkbox.check.width};
+        height: ${({ theme }) => theme.componentLibrary.checkbox.check.height};
+        border: ${({ theme }) => theme.componentLibrary.checkbox.check.border};
         border-top: none;
         border-left: none;
-        left: ${(props) => props.theme.componentLibrary.checkbox.check.left};
-        top: ${(props) => props.theme.componentLibrary.checkbox.check.top};
+        left: ${({ theme }) => theme.componentLibrary.checkbox.check.left};
+        top: ${({ theme }) => theme.componentLibrary.checkbox.check.top};
         transform: rotate(45deg);
     }
 `;
 
-export const StyledCheckbox = styled.div<customProps>`
+export const StyledCheckbox = styled.div<{ checked: boolean }>`
     ${UncheckedStyle}
-    ${(props) => props.checked && CheckedStyle}
+    ${({ checked }) => checked && CheckedStyle}
 `;
 
 export const BaseCheckboxContainer = styled.div`
