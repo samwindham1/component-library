@@ -16,8 +16,8 @@ export const App = () => {
         />,
         <Checkbox
             key={'test-app-checkbox'}
-            label={'Checkbox'}
             id={'test-app-checkbox'}
+            label={'Checkbox'}
             checked={state.checkbox}
             onChange={(value) => debug(`Checkbox click: ${value}`, setState({ ...state, checkbox: value }))}
         />,
