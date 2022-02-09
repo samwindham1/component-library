@@ -1,16 +1,4 @@
-import { useState } from 'react';
-
-export const debug = (value) => {
+export const debug = (value, callback) => {
     console.log(`=== Debug: ${value}`);
-};
-
-export const StateWrapper = ({ initialState, children }) => {
-    const [state, setState] = useState(initialState);
-
-    const debugState = (value) => {
-        debug(value);
-        return setState(value);
-    };
-
-    return children(state, debugState);
+    !!callback && callback(value);
 };
