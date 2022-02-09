@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 export const TextInput = styled.input.attrs({ type: 'text' })`
-    border: ${(props) => props.theme.componentLibrary.textInput.border};
-    border-radius: ${(props) => props.theme.componentLibrary.textInput.borderRadius};
-    height: ${(props) => props.theme.componentLibrary.textInput.height};
-    padding: ${(props) => props.theme.componentLibrary.textInput.padding};
+    border: ${({ theme }) => theme.componentLibrary.textInput.border};
+    border-radius: ${({ theme }) => theme.componentLibrary.textInput.borderRadius};
+    height: ${({ theme }) => theme.componentLibrary.textInput.height};
+    padding: ${({ theme }) => theme.componentLibrary.textInput.padding};
 
     :focus,
     :active {

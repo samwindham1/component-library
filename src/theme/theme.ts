@@ -10,9 +10,10 @@ import { element } from './constants/element.theme';
 import { button } from '../components/Button/theme';
 import { checkbox } from '../components/Checkbox/theme';
 import { textInput } from '../components/TextInput/theme';
+import { heading } from '../components/Heading/theme';
 
 const constantKeys = ['color', 'font', 'element'];
-const componentKeys = ['button', 'checkbox', 'textInput'];
+const componentKeys = ['button', 'checkbox', 'textInput', 'heading'];
 
 export const buildTheme = (theme: Theme): ComponentLibraryTheme => {
     const colorTheme = color();
@@ -32,7 +33,8 @@ export const buildTheme = (theme: Theme): ComponentLibraryTheme => {
     const components = {
         button: button(constants),
         checkbox: checkbox(constants),
-        textInput: textInput(constants)
+        textInput: textInput(constants),
+        heading: heading(constants)
     };
 
     // Pick and merge components from user's theme

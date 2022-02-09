@@ -1,5 +1,6 @@
 import { ButtonTheme } from '../components/Button/types';
 import { CheckboxTheme } from '../components/Checkbox/types';
+import { HeadingTheme } from 'components/Heading/types';
 import { TextInputTheme } from '../components/TextInput/types';
 
 export interface Color {
@@ -68,6 +69,7 @@ export type Components = {
     button: ButtonTheme;
     checkbox: CheckboxTheme;
     textInput: TextInputTheme;
+    heading: HeadingTheme;
 };
 
 export type Theme = Constants & Components;

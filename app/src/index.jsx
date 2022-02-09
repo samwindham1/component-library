@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { debug } from './utils';
-import { ThemeProvider, Button, Checkbox, TextInput } from '@samwindham1/component-library';
+import { ThemeProvider, Button, Checkbox, Heading, TextInput } from '@samwindham1/component-library';
 import { theme } from './theme';
 import './index.css';
 
@@ -8,6 +8,9 @@ export const App = () => {
     const [state, setState] = useState({ checkbox: false, textInput: '' });
 
     const components = [
+        <Heading key={'test-app-heading'} level={1}>
+            Components Library
+        </Heading>,
         <Button
             key={'test-app-button'}
             id={'test-app-button'}
