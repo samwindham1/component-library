@@ -1,7 +1,7 @@
 import { BaseCheckboxProps } from './types';
 import { HiddenCheckbox, StyledCheckbox, BaseCheckboxContainer } from './styles';
 
-const BaseCheckbox = ({ checked, className, onChange, ...componentProps }: BaseCheckboxProps) => {
+const BaseCheckbox = ({ checked, onChange, className, ...componentProps }: BaseCheckboxProps) => {
     return (
         <BaseCheckboxContainer className={className} onClick={() => onChange(checked)}>
             <HiddenCheckbox
