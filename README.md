@@ -10,9 +10,43 @@ This is a themable component library that uses React and styled-components. Simp
 npm install @samwindham1/component-library --save
 ```
 
-Anywhere in your code:
+Add the `ThemeProvider` at the top-most level of your app, and supply it your theme overrides.
 
 ```jsx
+// app.jsx
+
+import { ThemeProvider } from '@samwindham1/component-library';
+import { theme } from './theme';
+
+export const App = () => (
+    <ThemeProvider theme={theme}>
+        <... />
+    </ThemeProvider>
+);
+```
+
+Set up your theme overrides (See below for theme structure):
+
+```js
+// theme.js
+export const theme = {
+    color: {
+        primary: 'blue'
+        ...
+    },
+    button: {
+        color: 'magenta'
+        ...
+    },
+    ...
+}
+```
+
+Import and use a component:
+
+```jsx
+// Component.jsx
+
 import { Button } from '@samwindham1/component-library';
 
 const Component = () => (
@@ -27,29 +61,30 @@ const Component = () => (
 
 ### Default Props
 
-```ts
-id: string;
-disabled: boolean;
-```
+| prop     | type    | default        | description       |
+| -------- | ------- | -------------- | ----------------- |
+| id       | string  | [empty string] | custom id         |
+| disabled | boolean | false          |                   |
+| classes  | string  | [empty string] | custom classnames |
 
 ### Button
 
-```ts
-label: string;
-onClick: () => void;
-```
+| prop    | type       | default | description            |
+| ------- | ---------- | ------- | ---------------------- |
+| label   | string     |         |                        |
+| onClick | () => void |         | onClick event function |
 
 ### Checkbox
 
-```ts
-label: string;
-checked: boolean;
-onChange: (value: boolean) => void;
-```
+| prop     | type                     | default | description                                   |
+| -------- | ------------------------ | ------- | --------------------------------------------- |
+| label    | string                   |         |                                               |
+| checked  | boolean                  |         | parent component needs to control the state   |
+| onChange | (value: boolean) => void |         | onChange function to control the parent state |
 
 ### TextInput
 
-```ts
-value: string;
-onChange: (vale: string) => void;
-```
+| prop     | type                    | default | description                                   |
+| -------- | ----------------------- | ------- | --------------------------------------------- |
+| value    | string                  |         | parent component needs to control the state   |
+| onChange | (value: string) => void |         | onChange function to control the parent state |
