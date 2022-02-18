@@ -33,9 +33,7 @@ module.exports = {
             {
                 test: /\.html$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'html-loader'
-                }
+                use: ['html-loader']
             },
             {
                 test: /\.css$/i,
