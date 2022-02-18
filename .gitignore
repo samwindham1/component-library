@@ -9,8 +9,12 @@
 /coverage
 
 # production
+/public
 /build
 /dist
+/app/public
+/app/build
+/app/dist
 
 npm.cmd
 node.cmd
