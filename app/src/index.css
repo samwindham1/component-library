@@ -1,9 +1,50 @@
-.App {
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 50px;
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: #5e82c9;
+    border-bottom: 2px solid #2a5fcb;
+}
+
+.header-title {
+    color: white;
+    font-size: 1.625em;
+}
+
+.header-link {
+    color: #ccddff;
+}
+
+.components {
+    max-width: 600px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
 
-.App > * {
+.component-row {
     flex: 1 1 auto;
     margin-bottom: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.component-row:not(:last-child) {
+    border-bottom: 1px solid #5e82c9;
+}
+
+.component-label {
+    flex-basis: 200px;
 }

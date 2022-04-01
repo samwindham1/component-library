@@ -7,8 +7,8 @@ const headingLevel = (level: number): React.ElementType => {
     return headings[level - 1];
 };
 
-export const Heading = ({ level, children }: HeadingProps) => (
-    <StyledHeading as={headingLevel(level)} level={level}>
+export const Heading = ({ level, children, ...componentProps }: HeadingProps) => (
+    <StyledHeading as={headingLevel(level)} level={level} {...componentProps}>
         {children}
     </StyledHeading>
 );
