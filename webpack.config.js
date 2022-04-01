@@ -21,11 +21,13 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
+                include: path.resolve(__dirname, 'src'),
                 exclude: /node_modules/,
                 use: [
                     {
                         loader: 'ts-loader',
                         options: {
+                            transpileOnly: true,
                             getCustomTransformers: () => ({ before: [styledComponentsTransformer] })
                         }
                     }

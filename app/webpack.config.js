@@ -31,20 +31,15 @@ module.exports = {
                 }
             },
             {
-                test: /\.html$/,
-                exclude: /node_modules/,
-                use: ['html-loader']
-            },
-            {
                 test: /\.css$/i,
+                exclude: /node_modules/,
                 use: ['style-loader', 'css-loader']
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './index.html',
-            filename: './index.html'
+            template: './index.html'
         })
     ],
     resolve: {
